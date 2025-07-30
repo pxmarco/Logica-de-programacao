@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int login, produto, saldo;
+
+int main()
+{
+printf("\n       SIMULADOR DE COMPRA ONLINE\n");
+printf("\nDigite 1 para Sim e 0 para Nao\n");
+printf("\nO usuario esta logado?\n");
+scanf ("%d", &login);
+printf("O produto esta disponivel?\n");
+scanf ("%d", &produto);
+printf("O usuario tem saldo suficiente?\n");
+scanf ("%d", &saldo);
+
+    if (login ==1 && produto ==1 && saldo ==1)
+    {
+        printf("\nSua compra pode ser realizada!\n");
+    }
+
+
+    if (login ==0)
+    {
+        printf("\nO usuario nao esta logado!\n");
+    }
+
+    if (produto ==0)
+    {
+        printf("\nProduto indisponivel!\n");
+    }
+
+    if (saldo ==0)
+    {
+        printf("\nUsuario sem saldo!\n");
+    }
+
+
+return 0;
+}
