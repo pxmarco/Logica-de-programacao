@@ -1,0 +1,97 @@
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+
+void exibirCardapio ();
+int escolherItem();
+int escolherQuantidade();
+float calcularValortotal (int codigo, int quantidade);
+void imprimirComprovante (int codigo, int quantidade, float total);
+
+using namespace std;
+
+void exibirCardapio () {
+    printf ("~~~~~~~~~~~~~~~~CARDAPIO~~~~~~~~~~~~~~~~~\n\n");
+    printf ("1- Carreteiro.....................R$15,00\n");
+    printf ("2- Galinhada......................R$14,00\n");
+    printf ("3- Macarronada....................R$13,00\n");
+    printf ("4- Strogonoff.....................R$12,00\n");
+    printf ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+}
+
+int escolherItem(){
+    int codigo;
+    printf ("\nQual o item desejado:");
+    scanf ("%d", &codigo);
+    return codigo;
+}
+
+int escolherQuantidade(){
+    int quantidade;
+    printf ("\nQual a quantidade desejada:");
+    scanf ("%d", &quantidade);
+    return quantidade;
+}
+
+float calcularValortotal (int codigo, int quantidade){
+    float preco;
+    switch (codigo){
+        case 1:
+            preco = 15.0;
+            break;
+        case 2:
+            preco = 14.0;
+            break;
+        case 3:
+            preco = 13.0;
+            break;
+        case 4:
+            preco = 12.0;
+            break;
+        default:
+            printf("Código inválido!");
+            preco = 0.0;
+            break;
+    }
+    return preco * quantidade;
+}
+
+void imprimirComprovante (int codigo, int quantidade, float total){
+    char produto [20];
+    switch (codigo){
+        case 1:
+            sprintf(produto,"Carreteiro");
+            break;
+        case 2:
+            sprintf(produto,"Galinhada");
+            break;
+        case 3:
+            sprintf(produto,"Macarronada");
+            break;
+        case 4:
+            sprintf(produto,"Strogonoff");
+            break;
+        default:
+            sprintf(produto,"Desconhecido");
+            break;
+    }
+    printf ("\n~~~~~~~~~~~COMPROVANTE~~~~~~~~~~~~~\n");
+    printf ("Item: %s\n", produto);
+    printf ("Quantidade: %d\n", quantidade);
+    printf ("Valor total: %.2f\n", total);
+    printf ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+}
+
+int main()
+{
+    exibirCardapio();
+
+    int item = escolherItem();
+    int qtd = escolherQuantidade();
+
+    float total = calcularValortotal (item, qtd);
+
+    imprimirComprovante(item,qtd,total);
+
+    return 0;
+}
