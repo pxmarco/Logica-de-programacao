@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int div2(int numero) {
+    return numero % 2 == 0;
+}
+
+int div3(int numero) {
+    return numero % 3 == 0;
+}
+
+int div5(int numero) {
+    return numero % 5 == 0;
+}
+
+int main() {
+    int numero;
+    printf("Digite um numero: ");
+    scanf("%d", &numero);
+
+    if (div2(numero)) {
+        printf("O numero e divisivel por 2.\n");
+    }
+    if (div3(numero)) {
+        printf("O numero e divisivel por 3.\n");
+    }
+    if (div5(numero)) {
+        printf("O numero e divisivel por 5.\n");
+    }
+    else {
+        printf("O numero nao e divisivel por 2, 3 ou 5.\n");
+    }
+    return 0;
+}
