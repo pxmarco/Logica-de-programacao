@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+float mediaNotas (float nota1, float nota2, float nota3){
+    return (nota1 + nota2 + nota3) / 3;
+}
+
+int main()
+{
+    float nota1, nota2, nota3;
+    printf ("Digite a primeira nota: ");
+    scanf ("%f", &nota1);
+    printf ("\nDigite a segunda nota: ");
+    scanf ("%f", &nota2);
+    printf ("\nDigite a terceira nota: ");
+    scanf ("%f", &nota3);
+    int media = (int) mediaNotas (nota1, nota2, nota3);
+    printf ("\nA media de notas da turma foi: %d\n", media);
+    return 0;
+}
