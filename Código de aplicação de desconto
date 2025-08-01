@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+float desconto (float numero)
+{
+    return numero * .9;
+}
+
+int main()
+{
+    float valor, valorTotal;
+    printf("Digite o valor do produto:\n");
+    scanf("%f", &valor);
+    valorTotal = desconto (valor);
+    printf("\nO valor do seu produto com o desconto ficou: ");
+    printf ("%.2f\n", valorTotal);
+    return 0;
+}
