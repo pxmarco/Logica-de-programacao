@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int numero, divisor;
+    printf ("Digite um numero: ");
+    scanf ("%d", &numero);
+    printf ("Contagem da tabuada deste numero, multipilicando de 1 ate 10, respectivamente:\n");
+    for (divisor = 1; divisor <= 10; divisor ++)
+    {
+        printf("%d\n", numero * divisor);
+    }
+    return 0;
+}
