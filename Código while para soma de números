@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    printf ("Digite numeros, estes numeros vao se somar ate que voce digite 0 (Zero) duas vezes:\n");
+    int i = 1, a = 0;
+    while (i != 0)
+    {
+        scanf ("%d\n", &i);
+        a = i + a;
+    }
+    printf ("\nA soma total deu %d\n", a);
+    return 0;
+}
