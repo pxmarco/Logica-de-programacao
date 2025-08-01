@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int primeiro, segundo;
+    printf("Digite um numero:\n");
+    scanf("%d", &primeiro);
+    printf("\nDigite outro numero:\n");
+    scanf("%d", &segundo);
+    if (primeiro>segundo){
+        printf("\nO primeiro numero e maior: %d", primeiro);
+    }
+    else if (primeiro==segundo){
+        printf("\nOs numeros sao iguais");
+    }
+    else {
+        printf("\nO segundo numero e maior: %d", segundo);
+    }
+    return 0;
+}
