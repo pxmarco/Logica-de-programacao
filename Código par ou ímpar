@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int ehPar (int numero)
+{
+    if (numero % 2 == 0)
+        return 1;
+    else
+        return 0;
+    return 0;
+}
+
+int main()
+{
+    int digito;
+    printf("Digite um numero:\n");
+    scanf("%d", &digito);
+    printf("\nO seu numero e impar (0) ou par (1)?: ");
+    printf ("%d\n", ehPar(digito));
+}
